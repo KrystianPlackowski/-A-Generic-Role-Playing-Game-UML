@@ -1,4 +1,4 @@
 # cpp-task4
 DnD
 
-![UML diagram](https://yuml.me/diagram/plain/class/[Entity|std::string getDescription()]^-[Character|double getStrength();double getDexterity();double getSpeed()|void wear(Armor*);void wield(Weapon*);void carry(Item*)],[Character]^-[Elf],[Character]^-[Orc],[Decorator]++-1>[Character],[Character]^-[Decorator],[Decorator]^-[Mixture],[Decorator]^-[HalfWit],[Entity]^-[Item|double getWeight()],[Character]++-0..*>[Item],[Item]^-[Weapon|double getPower()],[Item]^-[Armor|double getResistance()],[Armor]^-[PlateArmor],[Armor]^-[Socks],[Weapon]^-[Axe],[Weapon]^-[TireBouchon],[Weapon]^-[Brick],[Character]++-1>[Armor],[Character]++-1>[Weapon])
+![UML diagram](uml.png)
