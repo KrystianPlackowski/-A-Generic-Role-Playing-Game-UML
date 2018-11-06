@@ -36,37 +36,37 @@ for instance:
 The `getJSON` function should return a computer-readable data about the item/character in the [JSON format](https://en.wikipedia.org/wiki/JSON). For example (for the same character as above):
 ```json
 {
-	type: "Character",
-	name: "",
-	race: "orc",
-	adjectives: [ "half-wit" ],
-	wield: {
-		type: "Weapon",
-		name: "brick",
-		power: 5,
-		weight: 1,
-		size: 0.5
+	"type": "Character",
+	"name": "",
+	"race": "orc",
+	"adjectives": [ "half-wit" ],
+	"wield": {
+		"type": "Weapon",
+		"name": "brick",
+		"power": 5,
+		"weight": 1,
+		"size": 0.5
 	},
-	wears: {
-		type: "Armor",
-		name: "plate armor",
-		armor: 50,
-		weight: 20,
-		size: 3
+	"wears": {
+		"type": "Armor",
+		"name": "plate armor",
+		"armor": 50,
+		"weight": 20,
+		"size": 3
 	},
-	carries: [
+	"carries": [
 		{
-			type: "Armor",
-			name: "socks",
-			armor: 2,
-			weight: 0.03,
-			size: 0.01
+			"type": "Armor",
+			"name": "socks",
+			"armor": 2,
+			"weight": 0.03,
+			"size": 0.01
 		},
 		{
-			type: "Item",
-			name: "severed hand",
-			weight: 5,
-			size: 1
+			"type": "Item",
+			"name": "severed hand",
+			"weight": 5,
+			"size": 1
 		}
 	]
 }
