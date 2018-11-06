@@ -23,8 +23,8 @@ Character's speed is equal to it's strength divided by his total weight.
 ### Description:
 The `getDescription` function should return a string that (as the name suggest) describe the item/character, and should include (for a character):
 - Name (if present)
-- Race
 - Decorators
+- Race
 - Weapon (if any)
 - Armor (if any)
 - other Items (if any)
