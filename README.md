@@ -71,6 +71,7 @@ The `getJSON` function should return a computer-readable data about the item/cha
 	]
 }
 ```
+**The JSON string doesn't have to be formated the same way! But it have to be a valid JSON.**
 
 ## Requirements
 
