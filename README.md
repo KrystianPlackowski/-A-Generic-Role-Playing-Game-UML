@@ -1,4 +1,4 @@
-# Munchkin meets Dungeons and Dragons
+# A Generic Role Playing Game (pun intended)
 
 ## English
 Implement class structure described below on a diagram [UML diagram](https://en.wikipedia.org/wiki/Unified_Modeling_Language).
@@ -15,3 +15,7 @@ Załącz wszystkie potrzebne pliki nagłówkowe w `Entities/Entities.h`.
 ## Requirements
 
 Only files in the `Entities` directory will be considered as solution.
+
+## Acknowledgments
+
+Idea by [G. Gruszczynski](https://github.com/ggruszczynski). UML diagram done with [`yuml.me`](https://yuml.me/).
