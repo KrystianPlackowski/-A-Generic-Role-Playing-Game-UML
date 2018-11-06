@@ -20,6 +20,57 @@ Character can carry any number of items that fit in a sack of size `100`.
 Character can wield only one weapon, and wear only one armor.
 Character's speed is equal to it's strength divided by his total weight.
 
+### Description:
+The `getDescription` function should return a string that (as the name suggest) describe the item/character, and should include (for a character):
+- Name (if present)
+- Race
+- Decorators
+- Weapon (if any)
+- Armor (if any)
+- other Items (if any)
+
+for instance:
+`a half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks and a severed hand`
+
+### JSON
+The `getJSON` function should return a computer-readable data about the item/character in the [JSON format](https://en.wikipedia.org/wiki/JSON). For example (for the same character as above):
+```json
+{
+	type: "Character",
+	name: "",
+	race: "orc",
+	adjectives: [ "half-wit" ],
+	wield: {
+		type: "Weapon",
+		name: "brick",
+		power: 5,
+		weight: 1,
+		size: 0.5
+	},
+	wears: {
+		type: "Armor",
+		name: "plate armor",
+		armor: 50,
+		weight: 20,
+		size: 3
+	},
+	carries: [
+		{
+			type: "Armor",
+			name: "socks",
+			armor: 2,
+			weight: 0.03,
+			size: 0.01
+		},
+		{
+			type: "Item",
+			name: "severed hand",
+			weight: 5,
+			size: 1
+		}
+	]
+}
+```
 
 ## Requirements
 
