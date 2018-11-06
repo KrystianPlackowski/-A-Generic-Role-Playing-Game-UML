@@ -32,6 +32,22 @@ The `getDescription` function should return a string that (as the name suggest) 
 for instance:
 `a half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks and a severed hand`
 
+### Usage:
+```c++
+Character elf = new Elf();
+// I'm an elf.
+elf.wield(new Axe());
+// I'm an elf wielding an Axe.
+elf.carry(new Brick());
+// I'm an elf wielding an Axe and carrying a brick.
+elf = new Fatten(elf);
+// I'm an overweight elf wielding an Axe and carrying a brick.
+elf.setName("John");
+// I'm John the overweight elf wielding an Axe and carrying a brick.
+elf.getSpeed();
+// (50)/(2*45+3+1) = 0.53191489361
+```
+
 ### JSON
 The `getJSON` function should return a computer-readable data about the item/character in the [JSON format](https://en.wikipedia.org/wiki/JSON). For example (for the same character as above):
 ```json
