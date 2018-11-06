@@ -16,7 +16,7 @@ Załącz wszystkie potrzebne pliki nagłówkowe w `Entities/Entities.h`.
 
 ### Clarifications:
 The weight of the character is the sum of its body mass and all equipment he carries.
-Character can carry any number of items that fit in a sack of size `100`.
+Character can carry any number of items that fit in a sack of size `10`.
 Character can wield only one weapon, and wear only one armor.
 Character's speed is equal to it's strength divided by his total weight.
 
