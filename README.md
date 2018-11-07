@@ -7,7 +7,7 @@ Add all files in the `Entities` directory separating classes into `.h` and `.cpp
 Include all relevant headers in the `Entities/Entities.h` file.
 
 ### Polski
-Zaimplementuj strukturę klas przedstawioną na schemacie poniżej [UML diagram](https://pl.wikipedia.org/wiki/Unified_Modeling_Language).
+Zaimplementuj strukturę klas przedstawioną poniżej na [diagramie UML](https://pl.wikipedia.org/wiki/Unified_Modeling_Language).
 Dodaj wszystkie pliki w katalogu `Entities`, dzieląc klasy na pliki `.h` i `.cpp`.
 Załącz wszystkie potrzebne pliki nagłówkowe w `Entities/Entities.h`.
 
