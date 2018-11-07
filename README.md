@@ -44,15 +44,15 @@ Character * orc = new Ord();
 orc->wield(new Brick());
 // an orc, wielding a brick
 orc->carry(new Socks());
-// an orc, wielding an brick, and carrying some socks
+// an orc, wielding a brick, and carrying some socks
 orc = new HalfWit(orc);
-// a half-wit orc, wielding an brick, and carrying some socks
+// a half-wit orc, wielding a brick, and carrying some socks
 orc->setName("John");
-// John the half-wit orc, wielding an brick, and carrying some socks
+// John the half-wit orc, wielding a brick, and carrying some socks
 orc->wear(new PlateArmor());
-// John the half-wit orc, wielding an brick, wearing a plate armor, and carrying some socks
+// John the half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks
 orc->carry(new Socks());
-// John the half-wit orc, wielding an brick, wearing a plate armor, and carrying some socks and a severed hand
+// John the half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks and a severed hand
 orc->getSpeed();
 // (100)/(95+0.5+20+0.03+5) = 0.82966896208
 orc->getArmor();
