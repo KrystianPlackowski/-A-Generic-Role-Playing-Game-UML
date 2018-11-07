@@ -39,7 +39,7 @@ for instance:
 
 ### Usage:
 ```c++
-Character * orc = new Ord();
+Character * orc = new Orc();
 // an orc
 orc->wield(new Brick());
 // an orc, wielding a brick

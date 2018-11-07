@@ -2,24 +2,26 @@
 #include <iostream>
 
 int main() {
-  Entity * elf = new Elf();
-  std::cout << elf.getDescription() << "\n";
-  delete elf;
+  Character * orc = new Orc();
+  std::cout << "I'm " << orc->getDescription() << ".\n";
+  orc->wield(new Brick());
+  std::cout << "I'm " << orc->getDescription() << ".\n";
+  orc->carry(new Socks());
+  std::cout << "I'm " << orc->getDescription() << ".\n";
+  orc = new HalfWit(orc);
+  std::cout << "I'm " << orc->getDescription() << ".\n";
+  orc->setName("John");
+  std::cout << "I'm " << orc->getDescription() << ".\n";
+  orc->wear(new PlateArmor());
+  std::cout << "I'm " << orc->getDescription() << ".\n";
+  orc->carry(new Socks());
+  std::cout << "I'm " << orc->getDescription() << ".\n";
 
-  Entity * halfwitOrc = new HalfWit(new Orc());
-  std::cout << halfwitOrc.getDescription() << "\n";
-  delete halfwitOrc;
-  
-  Entity * armoredOrc = new Orc();
-  armoredOrc.wear(new PlateArmor());
-  armoredOrc.wield(new Brick());
-  armoderOrc.carry(new Axe());
-  armoderOrc.carry(new TireBouchon());
-  std::cout << armoredOrc.getDescription() << "\n";
-  delete armoredOrc;
-
-  Entity * heavyElf = new Elf();
-  for (int i=0; i<30; i++) heavyElf.carry(new Brick());
-  std::cout << heavyElf.getDescription() << "\n";
-  delete heavyElf;
+  std::cout << "My weight is "      << orc->getWeight() << ".\n";
+  std::cout << "My strength is "    << orc->getStrength() << ".\n";
+  std::cout << "My inteligence is " << orc->getInteligence() << ".\n";
+  std::cout << "My dexterity is "   << orc->getDexterity() << ".\n";
+  std::cout << "My speed is "       << orc->getSpeed() << ".\n";
+  std::cout << "My armor is "       << orc->getArmor() << ".\n";
+  std::cout << "My power is "       << orc->getPower() << ".\n";
 }
