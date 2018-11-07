@@ -20,6 +20,11 @@ Character can carry any number of items that fit in a sack of size `10`.
 Character can wield only one weapon, and wear only one armor.
 Character's speed is equal to it's strength divided by his total weight.
 
+## Requirements
+
+Only files in the `Entities` directory will be considered as solution.
+Everything have to be properly **destroyed**, this means [virtual destructor](https://www.geeksforgeeks.org/virtual-destructor/).
+
 ### Description:
 The `getDescription` function should return a string that (as the name suggest) describe the item/character, and should include (for a character):
 - Name (if present)
@@ -30,22 +35,30 @@ The `getDescription` function should return a string that (as the name suggest) 
 - other Items (if any)
 
 for instance:
-`a half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks and a severed hand`
+`John the half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks and a severed hand`
 
 ### Usage:
 ```c++
-Character elf = new Elf();
-// I'm an elf.
-elf.wield(new Axe());
-// I'm an elf wielding an Axe.
-elf.carry(new Brick());
-// I'm an elf wielding an Axe and carrying a brick.
-elf = new Fatten(elf);
-// I'm an overweight elf wielding an Axe and carrying a brick.
-elf.setName("John");
-// I'm John the overweight elf wielding an Axe and carrying a brick.
-elf.getSpeed();
-// (50)/(2*45+3+1) = 0.53191489361
+Character * orc = new Ord();
+// an orc
+orc->wield(new Brick());
+// an orc, wielding a brick
+orc->carry(new Socks());
+// an orc, wielding an brick, and carrying some socks
+orc = new HalfWit(orc);
+// a half-wit orc, wielding an brick, and carrying some socks
+orc->setName("John");
+// John the half-wit orc, wielding an brick, and carrying some socks
+orc->wear(new PlateArmor());
+// John the half-wit orc, wielding an brick, wearing a plate armor, and carrying some socks
+orc->carry(new Socks());
+// John the half-wit orc, wielding an brick, wearing a plate armor, and carrying some socks and a severed hand
+orc->getSpeed();
+// (100)/(95+0.5+20+0.03+5) = 0.82966896208
+orc->getArmor();
+// 50
+orc->getPower();
+// 5
 ```
 
 ### JSON
@@ -53,7 +66,7 @@ The `getJSON` function should return a computer-readable data about the item/cha
 ```json
 {
 	"type": "Character",
-	"name": "",
+	"name": "John",
 	"race": "orc",
 	"adjectives": [ "half-wit" ],
 	"wield": {
@@ -63,14 +76,14 @@ The `getJSON` function should return a computer-readable data about the item/cha
 		"weight": 1,
 		"size": 0.5
 	},
-	"wears": {
+	"wear": {
 		"type": "Armor",
 		"name": "plate armor",
 		"armor": 50,
 		"weight": 20,
 		"size": 3
 	},
-	"carries": [
+	"carry": [
 		{
 			"type": "Armor",
 			"name": "socks",
@@ -89,7 +102,7 @@ The `getJSON` function should return a computer-readable data about the item/cha
 ```
 **The JSON string doesn't have to be formated the same way! But it have to be a valid JSON.**
 
-## Requirements
+### Requirements
 
 Only files in the `Entities` directory will be considered as solution.
 
