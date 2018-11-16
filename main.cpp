@@ -14,7 +14,7 @@ int main() {
   std::cout << "I'm " << orc->getDescription() << ".\n";
   orc->wear(new PlateArmor());
   std::cout << "I'm " << orc->getDescription() << ".\n";
-  orc->carry(new Socks());
+  orc->carry(new SeveredHand());
   std::cout << "I'm " << orc->getDescription() << ".\n";
 
   std::cout << "My weight is "      << orc->getWeight() << ".\n";

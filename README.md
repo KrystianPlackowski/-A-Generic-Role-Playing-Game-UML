@@ -51,7 +51,7 @@ orc->setName("John");
 // John the half-wit orc, wielding a brick, and carrying some socks
 orc->wear(new PlateArmor());
 // John the half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks
-orc->carry(new Socks());
+orc->carry(new SeveredHand());
 // John the half-wit orc, wielding a brick, wearing a plate armor, and carrying some socks and a severed hand
 orc->getSpeed();
 // (100)/(95+0.5+20+0.03+5) = 0.82966896208
