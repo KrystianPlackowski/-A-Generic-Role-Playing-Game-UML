@@ -106,6 +106,54 @@ The `getJSON` function should return a computer-readable data about the item/cha
 
 Only files in the `Entities` directory will be considered as solution.
 
+## Example Decorator
+
+![Decorator UML diagram](dec_uml.png)
+
+```c++
+#include <stdio.h>
+
+class A {
+public:
+	virtual double getIQ() = 0;
+	virtual void doStuff() = 0;
+	virtual ~A() {};
+};
+
+class C : public A {
+public:
+	virtual double getIQ() { return 10; };
+	virtual void doStuff() { printf("Stuff is done.\n"); };
+	virtual ~C() { printf("C died\n"); }
+};
+
+class Decorator : public A {
+protected:
+	A* ptr;
+public:
+	Decorator(A* ptr_) { ptr = ptr_; };
+	virtual double getIQ() { return ptr->getIQ(); };
+	virtual void doStuff() { ptr->doStuff(); };
+	virtual ~Decorator() { delete ptr; }
+};
+
+class D : public Decorator {
+public:
+	D(A* ptr_) : Decorator(ptr_) {};
+	virtual double getIQ() { return ptr->getIQ() * 3; };
+	virtual ~D() {};
+};
+
+int main() {
+  A * obj;
+  obj = new C();
+  obj = new D(obj);
+  printf("IQ: %lg\n", obj->getIQ());
+  obj->doStuff();
+  delete obj;
+}
+```
+
 ## Acknowledgments
 
 Idea by [G. Gruszczynski](https://github.com/ggruszczynski). UML diagram done with [`yuml.me`](https://yuml.me/).
