@@ -1,5 +1,12 @@
+#ifndef ENTITIES_H
+#define ENTITIES_H
 
-// Include here all the needed headers of your entities library
-// #include "Entity.h"
-// #include "Character.h"
-// #include "..."
+#include "Entity.h"
+#include "Character.h"
+#include "Races.h"
+#include "Decorators.h"
+#include "Items.h"
+
+
+
+#endif
